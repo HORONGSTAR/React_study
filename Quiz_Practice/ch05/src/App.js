@@ -4,8 +4,8 @@ import Quiz03 from './Quiz03'
 
 function App() {
    // return <Quiz01 />
-   return <Quiz02 />
-   // return <Quiz03 />
+   // return <Quiz02 />
+   return <Quiz03 />
 }
 
 export default App
