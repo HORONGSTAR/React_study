@@ -5,6 +5,8 @@ function Quiz01() {
       console.log('Effect triggered')
    }, [])
 
+   // 1번
+
    return <div>Hello World</div>
 }
 

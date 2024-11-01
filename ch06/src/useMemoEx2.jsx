@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 
 function getAverage(numbers) {
    console.log('평균값 계산....')
@@ -6,7 +6,7 @@ function getAverage(numbers) {
    const sum = numbers.reduce((a, b) => a + b) //누적 합산 구하는 함수
    return sum / numbers.length
 }
-function UseMemoEx1() {
+function UseMemoEx2() {
    const [list, SetList] = useState([])
    const [number, SetNumber] = useState('')
    const OnChange = (e) => SetNumber(e.target.value)
@@ -15,6 +15,11 @@ function UseMemoEx1() {
       SetList(NextList)
       SetNumber('')
    }
+
+   // list state가 바뀔때만 getAverage가 실행된다.
+
+   const avg = useMemo(() => getAverage(list), [list])
+
    return (
       <>
          <input type="text" value={number} onChange={OnChange} />
@@ -25,9 +30,9 @@ function UseMemoEx1() {
             ))}
          </ul>
          <div>
-            <b>평균값:{getAverage(list)} </b>
+            <b>평균값:{avg} </b>
          </div>
       </>
    )
 }
-export default UseMemoEx1
+export default UseMemoEx2

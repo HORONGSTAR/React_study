@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import App from './App.css'
+import React, { useState, useRef } from 'react'
 
 function TextStyle() {
    const [form, setForm] = useState({

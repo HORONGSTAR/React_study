@@ -1,28 +1,12 @@
-ul {
-   margin: 0;
-   padding: 0;
-   list-style: none;
-}
-li {
-   padding: 20px;
-   margin: 5px;
-}
-
-.wrap {
-   max-width: 1200px;
-}
 /* theme light */
 .light {
-   background-color: #f8eed9;
-}
-
-.light li {
-   background-color: #92d19a;
+   background-color: white;
 }
 
 /* theme dark */
 .dark {
-   background-color: #120907;
+   background-color: black;
+   color: white;
 }
 
 /* theme pink */

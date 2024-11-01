@@ -8,8 +8,11 @@ function Quiz04() {
    }
 
    useEffect(() => {
-      // 뒷정리 함수 작성
-   }, []) // 이 부분 작성
+      console.log('체크박스 실행')
+      return () => {
+         console.log('체크박스가 업데이트 되기 전입니다.')
+      }
+   }, [isChecked])
 
    return (
       <div>
