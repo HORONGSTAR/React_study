@@ -18,11 +18,11 @@ const Quiz01 = () => {
    }, [isRunning])
 
    const startTimer = () => {
-      //여기에 코드 작성
+      setIsRunning(true)
    }
 
    const stopTimer = () => {
-      //여기에 코드 작성
+      setIsRunning(false)
    }
 
    return (
