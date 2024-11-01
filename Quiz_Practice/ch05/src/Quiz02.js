@@ -5,6 +5,8 @@ function Quiz02() {
       { id: 1, name: '프로젝트 A', status: '미완료' },
       { id: 2, name: '프로젝트 B', status: '완료' },
    ])
+   const [inputName, setInputName] = useState('')
+   const [selectStatus, setSelectStatus] = useState('미완료')
    const [id, setId] = useState(3)
 
    const projectsList = projects.map((project) => (
@@ -17,8 +19,6 @@ function Quiz02() {
       const removeProject = projects.filter((project) => project.id !== id)
       setProjects(removeProject)
    }
-   const [inputName, setInputName] = useState('')
-   const [selectStatus, setSelectStatus] = useState('미완료')
 
    const onChangeInput = (e) => setInputName(e.target.value)
    const onChangeSelect = (e) => setSelectStatus(e.target.value)
@@ -31,6 +31,8 @@ function Quiz02() {
       })
       setProjects(nextProject)
       setId(id + 1)
+      setInputName('')
+      setSelectStatus('미완료')
    }
 
    return (

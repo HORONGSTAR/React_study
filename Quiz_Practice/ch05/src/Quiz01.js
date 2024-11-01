@@ -20,6 +20,7 @@ function Quiz01() {
    const onRemove = (dept) => {
       const removeEmployees = employees.filter((employee) => employee.dept !== dept)
       setEmployees(removeEmployees)
+      setRemoveDept('')
       return
    }
 
