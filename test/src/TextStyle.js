@@ -33,19 +33,47 @@ function TextStyle() {
             <ul>
                <li>
                   <label htmlFor="width">width : </label>
-                  <input id="width" type="text" onChange={onChange} onFocus={onFocus} value={width} list="widthList" />
+                  <input
+                     id="width"
+                     type="text"
+                     onChange={onChange}
+                     onFocus={onFocus}
+                     value={width}
+                     list="widthList"
+                  />
                </li>
                <li>
                   <label htmlFor="color">color : </label>
-                  <input id="color" type="text" onChange={onChange} onFocus={onFocus} value={color} list="colorList" />
+                  <input
+                     id="color"
+                     type="text"
+                     onChange={onChange}
+                     onFocus={onFocus}
+                     value={color}
+                     list="colorList"
+                  />
                </li>
                <li>
                   <label htmlFor="fontSize">fonstSize : </label>
-                  <input id="fontSize" type="text" onChange={onChange} onFocus={onFocus} value={fontSize} list="fontSizeList" />
+                  <input
+                     id="fontSize"
+                     type="text"
+                     onChange={onChange}
+                     onFocus={onFocus}
+                     value={fontSize}
+                     list="fontSizeList"
+                  />
                </li>
                <li>
                   <label htmlFor="textDecoration">textDecoration : </label>
-                  <input id="textDecoration" type="text" onChange={onChange} onFocus={onFocus} value={textDecoration} list="textDecorationList" />
+                  <input
+                     id="textDecoration"
+                     type="text"
+                     onChange={onChange}
+                     onFocus={onFocus}
+                     value={textDecoration}
+                     list="textDecorationList"
+                  />
                </li>
                <datalist id="widthList">
                   <option value="1920px"></option>
@@ -103,7 +131,9 @@ function TextStyle() {
                   textDecoration: textDecoration,
                }}
             >
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ratione fugiat et eius possimus minima quisquam eos quis? Velit, facere! Dolores doloribus sit earum adipisci obcaecati consequatur quae porro in!
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ratione fugiat et
+               eius possimus minima quisquam eos quis? Velit, facere! Dolores doloribus sit earum
+               adipisci obcaecati consequatur quae porro in!
             </p>
          </div>
       </>
