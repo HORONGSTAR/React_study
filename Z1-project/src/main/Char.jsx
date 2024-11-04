@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo, useCallback } from 'react'
 
 function Char() {
    const [chars, setChars] = useState([
@@ -18,7 +18,7 @@ function Char() {
       return (
          <div className="col-3 my-3" key={char.id}>
             <div className="card">
-               <img src={char.img} className="card-img-top" alt="캐릭터"></img>
+               <img src={char.img} className="card-img-top" alt={char.name}></img>
                <div className="card-body">
                   <h5 className="card-title">{char.name}</h5>
                   <p className="card-text">{char.keyword}</p>
@@ -28,7 +28,7 @@ function Char() {
       )
    })
 
-   const addNextChar = () => {
+   const addNextChar = useCallback(() => {
       const nextChar = chars.concat({
          id: nextId,
          name: inputName,
@@ -40,7 +40,7 @@ function Char() {
       setinputName('')
       setinputKeyWord('')
       setinputImg('')
-   }
+   }, [inputName, inputImg, inputKeyWord])
 
    const onChangeName = (e) => setinputName(e.target.value)
    const onChangeKeyWord = (e) => setinputKeyWord(e.target.value)
@@ -51,40 +51,17 @@ function Char() {
          <div className="row">{charsList}</div>
          <div className="input-group mb-3">
             <span className="input-group-text">이름</span>
-            <input
-               id="name"
-               type="text"
-               className="form-control"
-               onChange={onChangeName}
-               value={inputName}
-            />
+            <input id="name" type="text" className="form-control" onChange={onChangeName} value={inputName} />
          </div>
          <div className="input-group mb-3">
             <span className="input-group-text">키워드</span>
-            <input
-               id="name"
-               type="text"
-               className="form-control"
-               onChange={onChangeKeyWord}
-               value={inputKeyWord}
-            />
+            <input id="name" type="text" className="form-control" onChange={onChangeKeyWord} value={inputKeyWord} />
          </div>
          <div className="input-group mb-3">
             <span className="input-group-text">이미지 주소</span>
-            <input
-               id="name"
-               type="text"
-               className="form-control"
-               onChange={onChangeImg}
-               value={inputImg}
-            />
+            <input id="name" type="text" className="form-control" onChange={onChangeImg} value={inputImg} />
          </div>
-         <button
-            onClick={addNextChar}
-            type="button"
-            className="btn btn-secondary"
-            disabled={inputName && inputKeyWord && inputImg ? false : true}
-         >
+         <button onClick={addNextChar} type="button" className="btn btn-secondary" disabled={inputName && inputKeyWord && inputImg ? false : true}>
             +
          </button>
       </section>

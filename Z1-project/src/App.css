@@ -1,0 +1,17 @@
+.card-img-top {
+   overflow: hidden;
+   height: 200px;
+   object-fit: cover;
+}
+
+@media (max-width: 991px) {
+   .col-3 {
+      width: 33.3%;
+   }
+}
+
+@media (max-width: 767px) {
+   .col-3 {
+      width: 50%;
+   }
+}
