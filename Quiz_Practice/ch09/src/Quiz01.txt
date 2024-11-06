@@ -1,0 +1,31 @@
+import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import NewPage from './NewsPage'
+import Category from './Category'
+import NewsList from './NewsList'
+
+function App() {
+   return (
+      <div>
+         <h1>리액트 라우터</h1>
+         <ul>
+            <li>
+               <a href="/">NewsPage</a>
+            </li>
+            <li>
+               <a href="/category">Category</a>
+            </li>
+            <li>
+               <a href="/newsList">NewsList</a>
+            </li>
+         </ul>
+         <Routes>
+            <Route path="/" element={<NewPage />}></Route>
+            <Route path="/category" element={<Category />}></Route>
+            <Route path="/newsList" element={<NewsList />}></Route>
+         </Routes>
+      </div>
+   )
+}
+
+export default App
