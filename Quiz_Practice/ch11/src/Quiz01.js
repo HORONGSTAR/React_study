@@ -7,7 +7,7 @@ const initialState = []
 function reducer(state, action) {
    switch (action.type) {
       case 'add':
-         return state.concat({ id: state.length, text: action.text })
+         return state.concat({ id: new Date(), text: action.text })
       case 'delete':
          return action.text
       default:
@@ -23,6 +23,7 @@ const Quiz01 = () => {
    const handleAddTodo = () => {
       if (inputValue.trim()) {
          dispatch({ type: 'add', text: inputValue })
+         setInputValue('')
       }
    }
 

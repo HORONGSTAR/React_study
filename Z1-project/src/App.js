@@ -1,8 +1,15 @@
 import './App.css'
-import Char from './main/Char'
+import Todo from './components/Todo'
+import { Provider } from 'react-redux'
 
 function App() {
-   return <Char></Char>
+   return (
+      <div>
+         <provider>
+            <Todo></Todo>
+         </provider>
+      </div>
+   )
 }
 
 export default App
