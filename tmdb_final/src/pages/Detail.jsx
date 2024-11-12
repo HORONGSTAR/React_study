@@ -1,7 +1,8 @@
 import '../styles/common.css'
 import { Wrap, Main } from '../styles/StylesComponent'
-import Menu from '../components/slider/Menu'
-import Footer from '../components/slider/Footer'
+import Menu from '../components/Menu'
+import Banner from '../components/Banner'
+import Footer from '../components/Footer'
 
 function Detail() {
    return (
