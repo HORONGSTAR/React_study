@@ -11,7 +11,7 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup'
 
 function Home() {
    const [alignment, setAlignment] = useState('movie')
-   const handleChange = useCallback((event, newAlignment) => {
+   const handleChange = useCallback((newAlignment) => {
       setAlignment(newAlignment)
    }, [])
 

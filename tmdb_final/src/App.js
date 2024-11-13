@@ -10,13 +10,13 @@ import { Route, Routes } from 'react-router-dom'
 function App() {
    return (
       <Routes>
-         <Route path="/" element={<Home />}></Route>
-         <Route path="/popular" element={<MovieCategory category="popular" />}></Route>
-         <Route path="/now_playing" element={<MovieCategory category="now_playing" />}></Route>
-         <Route path="/upcoming" element={<MovieCategory category="upcoming" />}></Route>
-         <Route path="/detail/:movieId" element={<Detail />}></Route>
-         <Route path="/search" element={<SearchResults />}></Route>
-         <Route path="/*" element={<NotFound />}></Route>
+         <Route path="/" element={<Home />} />
+         <Route path="/popular" element={<MovieCategory category="popular" />} />
+         <Route path="/now_playing" element={<MovieCategory category="now_playing" />} />
+         <Route path="/upcoming" element={<MovieCategory category="upcoming" />} />
+         <Route path="/detail/:movieId" element={<Detail />} />
+         <Route path="/search" element={<SearchResults />} />
+         <Route path="/*" element={<NotFound />} />
       </Routes>
    )
 }
